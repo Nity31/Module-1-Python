@@ -152,3 +152,45 @@ for i in l:
 for key , value in sorted (dic.items()):
     print(key," : ",value)
 
+
+'''17.Write a python program using function to find the sum of odd series and even series
+Odd series: 12/ 1! + 32/ 3! + 52/ 5!+……n
+Even series: 22/ 2! + 42/ 4! + 62/ 6!+……n'''
+def factorial(num):
+    fac=1
+    for i in range(1,num+1):
+        fac=fac*i
+    return fac
+    
+def even(n):
+    total=0
+    for i in range(2,n+1,2):
+        total=total+(i**2)/factorial(i)
+    print("Sum of even number:",total)
+
+def odd(n):
+    total=0
+    for i in range(1,n+1,2):
+        total=total+(i**2)/factorial(i)
+    print("Sum of odd number :",total)
+    
+
+n=int(input("Enter a number :"))
+
+even(n)
+odd(n)
+
+
+#19.Python function that takes a list and returns a new list with unique elements of the first list.
+def l(list1):
+    list2=[]
+    for i in list1:
+        if i not in list2:
+            list2.append(i)
+    else:
+        return list2
+list1=[1,2,3,4,5,1,3,4,5,7,6,9]
+print("original List",list1)
+print("Unique List",l(list1))
+        
+    
