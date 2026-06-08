@@ -181,6 +181,15 @@ even(n)
 odd(n)
 
 
+#18. Program to Find Factorial of Number Using Recursion
+def factorial(n):
+    if n==0 or n==1:
+        return 1
+    else:
+        return n*factorial(n-1)
+print(factorial(5)
+
+
 #19.Python function that takes a list and returns a new list with unique elements of the first list.
 def l(list1):
     list2=[]
